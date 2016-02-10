@@ -3,6 +3,7 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
+@import 'bower_components/fullpage.js/jquery.fullPage.scss';  
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -41,3 +42,112 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+/*Variables */
+
+$lato: 'Lato', sans-serif;
+$tabbar-menu-icon-color:#fff;
+
+/* Global */
+
+.row.arrow {
+  .panel {
+    width: 50px; padding: 10px; cursor: pointer;
+    img {width: 90%;}
+  }
+  &.up {
+    img {
+              transform:rotate(180deg);
+          -ms-transform:rotate(180deg); /* IE 9 */
+      -webkit-transform:rotate(180deg); /* Safari and Chrome */      
+    }
+  }
+}
+
+/* Nav */
+nav.tab-bar {z-index: 100; position: fixed; width: 100%; top:0;}
+.right-off-canvas-menu {position: fixed; top:0;}
+section.left.tab-bar-section {
+  img {width: 130px;}
+}
+
+a.menu-icon {
+  span {
+    height: .2rem;
+    -webkit-box-shadow:     1px 15px 1px 1px $tabbar-menu-icon-color,
+                            1px 25px 1px 1px $tabbar-menu-icon-color,
+                            1px 35px 1px 1px $tabbar-menu-icon-color;
+        box-shadow:         0 15px 0 1px $tabbar-menu-icon-color,
+                            0 25px 0 1px $tabbar-menu-icon-color,
+                            0 35px 0 1px $tabbar-menu-icon-color;
+  }
+  &:hover span {
+    -webkit-box-shadow:     1px 15px 1px 1px #b3b3b3,
+                            1px 25px 1px 1px #b3b3b3,
+                            1px 35px 1px 1px #b3b3b3;
+        box-shadow:         0 15px 0 1px #b3b3b3,
+                            0 25px 0 1px #b3b3b3,
+                            0 35px 0 1px #b3b3b3;    
+  }
+}
+
+.off-canvas-list {
+  li {
+    a {font-family: $lato;}
+  }
+}
+
+/* Section 0 */
+#section0 {
+  background: url(../images/orr.jpg) 0 0 no-repeat;
+  background-size:cover;
+  .row:first-child {margin-top:70px;}
+  .scroll {text-align: center;
+    .panel {cursor: pointer; width: 290px; margin: 0 auto;}
+    #well {
+      width: 190px;
+      overflow: hidden; 
+      margin:0 auto;
+      padding: 0 20px;
+      text-align: left;
+      h3 {
+        background: -webkit-gradient(linear,left top,right top,color-stop(0, #4d4d4d),color-stop(0.4, #4d4d4d),color-stop(0.5, white),color-stop(0.6, #4d4d4d),color-stop(1, #4d4d4d)); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: slidetounlock 4s infinite;
+        padding: 0;
+        width: 300%;
+        background-repeat: no-repeat;
+      } 
+    }
+    img {width: 50px;}
+  }
+}
+@-webkit-keyframes slidetounlock {
+  0% {
+    background-position: -265px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+/* Section 1 */
+#section1 {
+  background: url(../images/work.jpg) 0 0 no-repeat;
+  background-size: cover;
+}
+
+/* Section 2 */
+#section2 {
+  background: url(../images/resume.jpg) 0 0 no-repeat;
+  background-size: cover;
+}
+
+/* Section 3 */
+#section3 {
+  background: url(../images/contact.jpg) 0 0 no-repeat;
+  background-size: cover;
+  ul {-webkit-padding-start: 0; margin-left:0; list-style: none;}
+}
