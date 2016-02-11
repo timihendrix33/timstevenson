@@ -45,10 +45,34 @@
 
 /*Variables */
 
+$red: #961b1c;
 $lato: 'Lato', sans-serif;
 $tabbar-menu-icon-color:#fff;
 
+$panel-bg: rgba(255,255,255,.9);
+$panel-border-style: none;
+$panel-border-size: 0;
+
+@mixin nopadding {padding:0 !important;}
+
 /* Global */
+.no-padding {
+	@include nopadding;
+}
+#fullpage {
+	.row {
+		max-width: 100%;
+		.row {
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}
+
+}
+.panel {
+	background: rgba(255,255,255,.9);
+	padding: 1.25rem;
+}
 
 .row.arrow {
   .panel {
@@ -65,29 +89,53 @@ $tabbar-menu-icon-color:#fff;
 }
 
 /* Nav */
-nav.tab-bar {z-index: 100; position: fixed; width: 100%; top:0;}
+.title-bar {
+	z-index: 100; 
+	position: fixed; 
+	width: 100%; 
+	top:0;
+	background: $red;
+	height: 5rem;
+}
 .right-off-canvas-menu {position: fixed; top:0;}
-section.left.tab-bar-section {
+.title-bar-left {
   img {width: 130px;}
 }
+.title-bar-right {
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    width: 5rem;
+    border-left: solid 1px #4b0e0e;
+    right: 0;
+    .menu {
+    	margin: 5px auto;
+    	width: 50px;    	
+    }
+}
 
-a.menu-icon {
-  span {
+.menu-icon {	
+  width: 40px;
+  height: 4rem;
+  cursor: pointer;
+  &:after {
+  	background:transparent;
     height: .2rem;
-    -webkit-box-shadow:     1px 15px 1px 1px $tabbar-menu-icon-color,
-                            1px 25px 1px 1px $tabbar-menu-icon-color,
-                            1px 35px 1px 1px $tabbar-menu-icon-color;
-        box-shadow:         0 15px 0 1px $tabbar-menu-icon-color,
-                            0 25px 0 1px $tabbar-menu-icon-color,
-                            0 35px 0 1px $tabbar-menu-icon-color;
+    -webkit-box-shadow:     1px 20px 1px 1px $tabbar-menu-icon-color,
+                            1px 30px 1px 1px $tabbar-menu-icon-color,
+                            1px 40px 1px 1px $tabbar-menu-icon-color;
+    box-shadow:         0 20px 0 1px $tabbar-menu-icon-color,
+                        0 30px 0 1px $tabbar-menu-icon-color,
+                        0 40px 0 1px $tabbar-menu-icon-color;
   }
-  &:hover span {
-    -webkit-box-shadow:     1px 15px 1px 1px #b3b3b3,
-                            1px 25px 1px 1px #b3b3b3,
-                            1px 35px 1px 1px #b3b3b3;
-        box-shadow:         0 15px 0 1px #b3b3b3,
-                            0 25px 0 1px #b3b3b3,
-                            0 35px 0 1px #b3b3b3;    
+  &:hover:after {
+  	background:transparent;
+    -webkit-box-shadow:     1px 20px 1px 1px #b3b3b3,
+                            1px 30px 1px 1px #b3b3b3,
+                            1px 40px 1px 1px #b3b3b3;
+        box-shadow:         0 20px 0 1px #b3b3b3,
+                            0 30px 0 1px #b3b3b3,
+                            0 40px 0 1px #b3b3b3;    
   }
 }
 
@@ -103,21 +151,31 @@ a.menu-icon {
   background-size:cover;
   .row:first-child {margin-top:70px;}
   .scroll {text-align: center;
-    .panel {cursor: pointer; width: 290px; margin: 0 auto;}
+    .panel {
+    	cursor: pointer; 
+    	width: 290px; 
+    	margin: 40px auto;
+    }
     #well {
-      width: 190px;
+      width: 164px;
       overflow: hidden; 
       margin:0 auto;
       padding: 0 20px;
       text-align: left;
+      @include breakpoint(medium) {
+      	width:250px;
+      }
       h3 {
         background: -webkit-gradient(linear,left top,right top,color-stop(0, #4d4d4d),color-stop(0.4, #4d4d4d),color-stop(0.5, white),color-stop(0.6, #4d4d4d),color-stop(1, #4d4d4d)); 
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-animation: slidetounlock 4s infinite;
         padding: 0;
-        width: 300%;
+        width: 350%;
         background-repeat: no-repeat;
+	      @include breakpoint(medium) {
+	      	width:250%;
+	      }        
       } 
     }
     img {width: 50px;}
@@ -125,7 +183,7 @@ a.menu-icon {
 }
 @-webkit-keyframes slidetounlock {
   0% {
-    background-position: -265px 0;
+    background-position: -285px 0;
   }
   100% {
     background-position: 0 0;
