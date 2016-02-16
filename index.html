@@ -4,23 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Tim Stevenson | Digital Producer, Web Developer</title>
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
     <div class="off-canvas-wrapper">
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
         <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
-          <button class="close-button" aria-label="Close Menu" type="button" data-close>
-            <span aria-hidden="true">x</span>
-          </button>
           <ul class="off-canvas-list">
-            <li><a href="index.php#bobby">Hello</a></li>
-            <li><a href="ux.php">Experience Design</a></li>
-            <li><a href="dev.php">Web Develpment</a></li>
-            <li><a href="producer.php">Interactive Production</a></li>
-            <li><a href="index.php#resume">Resumé</a></li>
-            <li><a href="index.php#contact">Contact</a></li>            
+            <li data-menuanchor="bobby" data-toggle="offCanvasRight"><a href="index.html#bobby">Hello</a></li>
+            <li><a href="producer.html" data-toggle="offCanvasRight">Digital Producer</a></li>
+            <li><a href="dev.html" data-toggle="offCanvasRight">Web Developer</a></li>
+            <li><a href="ux.html" data-toggle="offCanvasRight">Experience Designer</a></li>
+            <li data-menuanchor="resume"><a href="index.html#resume" data-toggle="offCanvasRight">Resumé</a></li>
+            <li data-menuanchor="contact"><a href="index.html#contact" data-toggle="offCanvasRight">Contact</a></li>            
           </ul>
         </div>
         <div class="off-canvas-content" data-off-canvas-content>
@@ -35,7 +32,7 @@
             </div>
             <div class="title-bar-right">
               <ul class="menu">
-                <li><button class="menu-icon" type="button" data-open="offCanvasRight"></button></li>
+                <li><button class="menu-icon" type="button" data-toggle="offCanvasRight"></button></li>
               </ul>
             </div>
           </div>  <!-- end top bar -->        
@@ -46,7 +43,7 @@
                 <div class="medium-8 columns">
                   <div class="panel" id="orr">
                     <h3>What's that logo? It's a hockey net. From above.</h3>
-                    <p>Who am I? A hockey player, experience designer, web developer, problem solver. What are your challenges?</p>
+                    <p>Who am I? A hockey player, problem solver, and an all around digital utility. What are your challenges?</p>
                   </div>
                 </div>
                 <div class="medium-2 columns">&nbsp;</div>
@@ -74,7 +71,7 @@
                 </div> 
                 <div class="panel" id="worked">
                   <h3><a href="ux.php">My Work/Portfolio</a></h3>
-                  <p>See what I've done as an <a href="ux.php">experience designer</a>, <a href="dev.php">web developer</a> and <a href="producer.php">interactive producer</a>.</p>
+                  <p>See what I've done as a <a href="producer.php">digital producer</a>, <a href="dev.php">web developer</a> and <a href="ux.php">experience designer</a>.</p>
                 </div>
                 <div class="panel arrow down">
                   <img src="images/arrow.png" alt="Down" />
@@ -91,7 +88,7 @@
                 </div>
                 <div class="panel" id="proof">        
                   <h3><a href="tim-stevenson-resume.pdf">My Resume</a></h3>
-                  <p><a href="#" data-reveal-id="resumeModal" data-reveal>View</a> or <a href="tim-stevenson-resume.pdf">download</a> curriculum vitae</p>
+                  <p><a href="tim-stevenson-resume.pdf">Download the PDF</a> and don't be afraid to shoot it around!</p>
                 </div>
                 <div class="panel arrow down">
                   <img src="images/arrow.png" alt="Down" />

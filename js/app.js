@@ -1,7 +1,9 @@
 $(document).foundation();
 $(document).ready(function() {
   if($("#fullpage").length) {
-   	$("#fullpage").fullpage();
+   	$("#fullpage").fullpage({
+   		anchors: ['bobby','work','resume','contact']
+   	});
   }
 }); 
 
