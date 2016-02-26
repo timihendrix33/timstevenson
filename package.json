@@ -13,9 +13,9 @@
     "gulp-sass": "^2.1.0"
   },
   "scripts": {
-    "start": "gulp",
     "build": "gulp sass",
-    "postinstall": "gulp bash ./post_install.sh"
+    "start": "gulp",   
+    "postinstall": "bash ./post_install.sh"
   },
   "repository": {
     "type": "git",
