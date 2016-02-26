@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "gulp",
-    "build": "gulp sass"
+    "build": "gulp sass",
+    "postinstall": "bash ./post_install.sh"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   },
   "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "bower": "^1.7.7"
+  }
 }
