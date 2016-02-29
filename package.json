@@ -14,8 +14,8 @@
   },
   "scripts": {
     "build": "gulp sass",
-    "start": "gulp",   
-    "postinstall": "bash ./post_install.sh"
+    "start": "gulp"
+    // "postinstall": "bash ./post_install.sh"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,6 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "express": "^4.13.4",
     "bower": "^1.7.7",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.2.0",
