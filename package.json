@@ -15,7 +15,6 @@
   "scripts": {
     "build": "gulp sass",
     "start": "gulp"
-    // "postinstall": "bash ./post_install.sh"
   },
   "repository": {
     "type": "git",
