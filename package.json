@@ -1,10 +1,10 @@
 {
-  "name": "foundation-sites-template",
+  "name": "tims-portfolio-site",
   "version": "1.0.0",
   "engines": {
     "node": "0.12.4"
   },  
-  "description": "Basic template for a new Foundation for Sites project.",
+  "description": "Tim's Portfolio Site",
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -19,16 +19,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-sites-template.git"
+    "url": "https://github.com/timihendrix33/timstevenson.git"
   },
   "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
+    "email": "t.stevenson33@gmail.com"
   },
-  "author": "ZURB <foundation@zurb.com>",
+  "author": "Tim Stevenson",
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "express": "4.13.4",
     "bower": "^1.7.7",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.2.0",
