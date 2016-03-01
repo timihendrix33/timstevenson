@@ -5,7 +5,7 @@ app.set('port', (process.env.PORT || 5000));
 
 
 app.get('/', function(request, response) {
-  response.render('/index.html');
+  response.render('/');
 });
 
 app.listen(app.get('port'), function() {
