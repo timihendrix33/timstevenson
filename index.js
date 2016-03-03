@@ -16,6 +16,18 @@ app.set('view engine', 'html');
 app.get('/', function(request, response) {
   response.render('index.html');
 });
+app.get('/index.html', function(request, response) {
+  response.render('index.html');
+});
+app.get('/producer.html', function(request, response) {
+  response.render('producer.html');
+});
+app.get('/dev.html', function(request, response) {
+  response.render('dev.html');
+});
+app.get('/ux.html', function(request, response) {
+  response.render('ux.html');
+});
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
