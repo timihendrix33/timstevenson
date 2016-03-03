@@ -3,7 +3,7 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-@import 'bower_components/fullpage.js/jquery.fullPage.scss';  
+@import '../../bower_components/fullpage.js/jquery.fullPage.scss';  
 
 @include foundation-global-styles;
 @include foundation-grid;
@@ -96,7 +96,7 @@ $panel-border-size: 0;
 	position: fixed; 
 	width: 100%; 
 	top:0;
-	background: grey;
+	background: $red;
 	height: $title-bar-height;
 }
 .right-off-canvas-menu {position: fixed; top:0;}

@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass');
 var $    = require('gulp-load-plugins')();
 
 var sassPaths = [
@@ -7,7 +8,7 @@ var sassPaths = [
 ];
 
 gulp.task('sass', function() {
-  return gulp.src('/public/scss/app.scss')
+  return gulp.src('public/scss/app.scss')
     .pipe($.sass({
       includePaths: sassPaths
     })
@@ -15,9 +16,9 @@ gulp.task('sass', function() {
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('default', ['sass'], function() {
-  gulp.watch(['scss/**/*.scss'], ['sass']);
+  gulp.watch(['public/scss/**/*.scss'], ['sass']);
 });
